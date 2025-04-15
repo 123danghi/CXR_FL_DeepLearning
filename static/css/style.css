@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+}
+
+.card-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Upload Area Styles */
+.upload-area {
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+    border-color: #0d6efd;
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+.upload-area.active {
+    border-color: #0d6efd;
+    background-color: rgba(13, 110, 253, 0.08);
+}
+
+.upload-icon {
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.upload-text {
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.file-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Result Styles */
+.prediction-badge {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 50rem;
+    display: inline-block;
+}
+
+.badge-normal {
+    background-color: #198754;
+    color: white;
+}
+
+.badge-tuberculosis {
+    background-color: #dc3545;
+    color: white;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 50rem;
+}
+
+.progress-container {
+    margin-bottom: 1rem;
+}
+
+#result-image {
+    max-height: 300px;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .result-details {
+        margin-top: 1.5rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#results-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Preview Image */
+.preview-container {
+    margin-top: 1rem;
+    text-align: center;
+    display: none;
+}
+
+.preview-image {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+} 
